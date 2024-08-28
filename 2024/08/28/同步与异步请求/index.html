@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>我的博客 |  邓文静的博客</title>
+      <title>同步与异步请求 |  邓文静的博客</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -53,7 +53,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-我的日志"
+  id="post-同步与异步请求"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -64,7 +64,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  我的博客
+  同步与异步请求
 </h1>
  
 
@@ -72,15 +72,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/08/23/%E6%88%91%E7%9A%84%E6%97%A5%E5%BF%97/" class="article-date">
-  <time datetime="2024-08-23T03:36:52.000Z" itemprop="datePublished">2024-08-23</time>
+      <a href="/2024/08/28/%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/" class="article-date">
+  <time datetime="2024-08-28T09:21:53.000Z" itemprop="datePublished">2024-08-28</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">62</span>
+            <span class="post-count">156</span>
         </span>
     </span>
 
@@ -105,11 +105,15 @@
     <div class="article-entry" itemprop="articleBody">
        
   <blockquote>
-<p>对于刚开始学java应该注意哪些问题？哪些该学，哪些不该学呢？我们将从每天的更新逐步学习，把学习历程一点点记录下来。</p>
+<p>首先来了解一下异步函数async和await请求之间的关系</p>
 </blockquote>
 <!-- 标题 -->
-<h2 id="JAVA学习"><a href="#JAVA学习" class="headerlink" title="JAVA学习"></a>JAVA学习</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello word！&quot;</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="认识函数"><a href="#认识函数" class="headerlink" title="认识函数"></a>认识函数</h3> 
+<h2 id="异步函数async和await请求"><a href="#异步函数async和await请求" class="headerlink" title="异步函数async和await请求"></a>异步函数async和await请求</h2><blockquote>
+<p>函数async表示声明此段函数为异步请求，await通常写在声明函数async里面，例如：</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">onMounted</span>(<span class="title function_">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">searchTable</span>()</span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">searchRoleTable</span>()</span><br><span class="line">&#125;)                                                    #<span class="title class_">Vue</span> <span class="number">3</span> 的 onMounted 生命周期钩子，当组件挂载时会执行传入的回调函数。回调函数是一个异步函数，它首先等待 searchTable 函数的执行，然后等待 searchRoleTable 函数的执行。这意味着在组件挂载后，会立即进行表格数据和角色表格数据的搜索和更新。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="/2024/08/28/%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/living.jpg" alt="持续维护中"></p>
+ 
       <!-- reward -->
       
     </div>
@@ -173,7 +177,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/08/23/%E6%88%91%E7%9A%84%E6%97%A5%E5%BF%97/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/08/28/%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -184,19 +188,10 @@
    
   <nav class="article-nav">
     
-      <a href="/2024/08/28/%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            同步与异步请求
-          
-        </div>
-      </a>
     
-    
-      <a href="/2024/08/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="article-nav-link">
+      <a href="/2024/08/23/%E6%88%91%E7%9A%84%E6%97%A5%E5%BF%97/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">我的第一篇博客</div>
+        <div class="article-nav-title">我的博客</div>
       </a>
     
   </nav>

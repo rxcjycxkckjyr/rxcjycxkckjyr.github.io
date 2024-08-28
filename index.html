@@ -165,6 +165,62 @@
     
     
     <article
+  id="post-同步与异步请求"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/08/28/%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/"
+    >同步与异步请求</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/08/28/%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/" class="article-date">
+  <time datetime="2024-08-28T09:21:53.000Z" itemprop="datePublished">2024-08-28</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <blockquote>
+<p>首先来了解一下异步函数async和await请求之间的关系</p>
+</blockquote>
+<!-- 标题 -->
+<h2 id="异步函数async和await请求"><a href="#异步函数async和await请求" class="headerlink" title="异步函数async和await请求"></a>异步函数async和await请求</h2><blockquote>
+<p>函数async表示声明此段函数为异步请求，await通常写在声明函数async里面，例如：</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">onMounted</span>(<span class="title function_">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">searchTable</span>()</span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">searchRoleTable</span>()</span><br><span class="line">&#125;)                                                    #<span class="title class_">Vue</span> <span class="number">3</span> 的 onMounted 生命周期钩子，当组件挂载时会执行传入的回调函数。回调函数是一个异步函数，它首先等待 searchTable 函数的执行，然后等待 searchRoleTable 函数的执行。这意味着在组件挂载后，会立即进行表格数据和角色表格数据的搜索和更新。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="/2024/08/28/%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/living.jpg" alt="持续维护中"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-我的日志"
   class="article article-type-post"
   itemscope
